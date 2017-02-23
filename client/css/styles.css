@@ -1,0 +1,119 @@
+* {
+    /*-webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    font-family: calibri;*/
+}
+.strike span {
+    text-decoration: line-through;
+    color: #ccc;
+}
+.todos {
+    padding: 20px;
+}
+.jumbotron{
+    margin-right:3%;
+}
+.todo {
+    padding: 10px;
+    font-size: 21px;
+    border-bottom: 1px solid;
+}
+.radius {
+    border-radius: 4px !important;
+}
+.todo .btn {
+    margin-left: 5px;
+    width: 72px;
+}
+.todo:hover {
+    background: #e7e7e7;
+}
+.tasks{
+    font-weight:600;
+    margin:10px 0px; 
+}
+.activity{
+    margin-bottom: 1px ;
+}
+.severity{
+    float:left;
+   margin-right: 20px;
+} 
+.text-create{
+	float:left;
+    margin-right: 20px;
+} 
+.create-button{
+    float:left;
+}
+.input-lg{
+max-height: 40px;
+}
+.manage{
+    width: 100px !important; 
+}
+
+.max{
+    max-width: 70%;
+    padding: 0;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.actions{
+    width: 30%;
+}
+.sever{
+    width: 10%;
+}
+.main-text{
+    width: 40%;
+}
+.dropdown-toggle{
+    width: 165px !important;
+}
+@media (max-width: 991px) {
+    .todo .btn {
+        margin-bottom: 10px;
+    }
+    .todo input[type=checkbox] {
+        width: 25px;
+        height: 25px;
+    }
+}
+@media (max-width: 991px) {
+    .todo .btn-warning {
+        margin-top: 10px;
+        margin-left: 0px
+    }
+}
+
+@media (max-width: 450px) {
+    .todo .col-xs-8 {
+        width: 85%;
+    }
+    .todo .col-xs-3 {
+        width: 100%;
+        text-align: center;
+        border-top: 1px dashed #aaa;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .todo .col-xs-8 {
+        width: 85%;
+    }
+    .todo .col-xs-3 {
+        width: 100%;
+        text-align: center;
+        border-top: 1px dashed #aaa;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+}
+.preloader {
+    padding: 50px;
+    background: url('/image/preloader.gif') no-repeat 50% 50% transparent;
+}

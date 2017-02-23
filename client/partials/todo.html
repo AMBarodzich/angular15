@@ -1,0 +1,98 @@
+<div class="container" ng-controller="TodoCtrl">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<ul class="nav navbar-nav">
+					<li><a href="#/">Home page</a></li>
+					<li><a href="#/todo"><b>Main</b></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="alert alert-danger" role="alert" ng-hide="Warningerror.noempty">
+  		<h5 ><strong>Warning! </strong>Please enter correct todo name</h5>
+	</div>
+	<div class="severity">
+		<div class="btn-group">
+			<select id="myDropdown" ng-model="selectedSev"
+				class="btn dropdown-toggle btn-primary radius"
+				ng-disabled="Preloader.Loaded">
+				<option ng-repeat="x in severities" value="{{x}}">Choose
+					severity: {{x}}</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="text-create ">
+		<input type="text" class="form-control radius"
+			placeholder="What do I need to do?" ng-model="todoInput"
+			ng-disabled="Preloader.Loaded" id="text_create">
+	</div>
+	<div class="create-button ">
+		<button type="button" class="btn btn-success radius"
+			ng-model="todoInput" ng-click="save()"
+			ng-disabled="Preloader.Loaded" id="btn_create">Create Task</button>
+	</div>
+
+	<div class="container-table">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Severity</th>
+					<th>Task</th>
+					<th>Actions</th>
+					<th>Completed</th>
+				</tr>
+				<tr ng-hide="Preloader.dataLoaded">
+					<th></th>
+					<th></th>
+					<th><div class="preloader"></div></th>
+					<th></th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				<tr ng-repeat="todo in todos | orderBy: 'sever'"
+					ng-class="todo.isCompleted ? 'strike' : ''">
+					<td class="sever">{{todo.sever}}</td>
+					<td class="main-text"><span ng-show="!isEditable[$index]">{{todo.todo}}</span>
+						<input ng-show="isEditable[$index]"
+						class="form-control radius max" type="text" ng-model="todo.todo">
+					</td>
+
+					<td class="actions">
+					<input
+					    ng-show="isEditable[$index]"
+						type="button" class="btn btn-primary" value="Save"
+						ng-model="todo.todo"
+						ng-click="edit(todo.todo,todo,$index); alert(todo.todo);" id="btn_save"/>
+				    <input
+						ng-show="isEditable[$index]" type="button" class="btn"
+						value="Cancel" ng-show="isEditable[$index] = true"
+						ng-click="cancelClick(todo,$index)" id="btn_cancel"/>
+				    <input type="button"
+						class="btn btn-info" ng-disabled="todo.isCompleted"
+						class="pull-right" ng-hide="isEditable[$index]" value="Edit"
+						ng-click="editClick($index)" id="btn_edit"/>
+				    <input type="button"
+						class="btn btn-danger" class="pull-right"
+						ng-hide="isEditable[$index]" value="Delete"
+						ng-click="delete(todo)" id="btn_delete"/>
+					</td>
+					<td><input type="checkbox" ng-checked="todo.isCompleted"
+						ng-click="updateStatus($event, todo._id, todo)"></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="alert alert-info text-center"
+			ng-hide="todos.length > 0 || Preloader.Loaded">
+			<h3>No Todos yet!</h3>
+		</div>
+	</div>
+</div>
+
+</div>
+</div>
+

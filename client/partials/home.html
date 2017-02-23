@@ -1,0 +1,24 @@
+<div ng-controller="HomeCtrl">
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<ul class="nav navbar-nav">
+						<li><a href="#/"><b>Home page</b></a></li>
+						<li><a href="#/todo">Main</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container-fluid">
+			<div class="jumbotron">
+				<h1 class="activity">Current activity</h1>
+				<div>{{date}}</div>
+				<div class="tasks">There are currently open {{getCol()}}
+					tasks</div>
+				<a class="btn btn-success" href="#/todo">Manage task</a>
+			</div>
+		</div>
+
+	</div>
+</div>
