@@ -6,7 +6,7 @@
   "scripts": {
     "test": "karma start karma.conf.ci.js --no-fail-on-empty-test-suite",
     "postinstall": "bower install",
-    "start": "server/app.js",
+    "start": "node server/app.js",
     "build": "gulp",
     "preupdate-webdriver": "npm install",
     "update-webdriver": "webdriver-manager update",
