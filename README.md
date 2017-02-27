@@ -1,0 +1,1 @@
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://github.com/angular/angular-phonecat.git)
