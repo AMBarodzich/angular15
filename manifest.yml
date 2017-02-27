@@ -3,8 +3,8 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: angular15
-  host: angular15
+  name: angular15-borodichsashas-1215
+  host: angular15-borodichsashas-1215
   disk_quota: 1024M
   services:
   - todo-mongo-db
