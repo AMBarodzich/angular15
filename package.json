@@ -1,37 +1,40 @@
 {
-  "name": "ang15",
-  "private": true,
-  "version": "0.0.0",
-  "description": "A tutorial application for AngularJS",
-  "repository": "",
-  "license": "MIT",
-  "devDependencies": {
-    "bower": "^1.7.7",
-    "bower-nexus3-resolver": "*",
-    "express": "4.14.0",
-    "http-server": "^0.9.0",
-    "jasmine-core": "^2.4.1",
-    "jasmine-node": "^1.14.5",
-    "karma": "^0.13.22",
-    "karma-chrome-launcher": "^0.2.3",
-    "karma-coverage": "^1.1.1",
-    "karma-firefox-launcher": "^0.1.7",
-    "karma-jasmine": "^0.3.8",
-    "karma-phantomjs-launcher": "^1.0.1",
-    "karma-sonarqube-unit-reporter": "0.0.7",
-    "mongoose": "4.7.6",
-    "phantomjs-prebuilt": "^2.1.8",
-    "protractor": "^4.0.9"
-  },
+  "name": "SashasB",
+  "version": "1.0.0",
+  "description": "MEAN stack application",
+  "main": "server/app.js",
   "scripts": {
-    "postinstall": "bower install",
-    "start": "node server/app",
     "test": "karma start karma.conf.ci.js --no-fail-on-empty-test-suite",
-    "test-single-run": "karma start karma.conf.js --single-run",
+    "postinstall": "bower install",
+    "start": "server/app.js",
+    "build": "gulp",
     "preupdate-webdriver": "npm install",
     "update-webdriver": "webdriver-manager update",
     "preprotractor": "npm run update-webdriver",
-    "protractor": "protractor e2e-tests/protractor.conf.js",
-    "update-index-async": "node -e \"var fs=require('fs'),indexFile='app/index-async.html',loaderFile='app/bower_components/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\""
+    "protractor": "protractor e2e-tests/protractor.conf.js"
+  },
+  "keywords": [
+    "mean"
+  ],
+  "author": "webdev",
+  "license": "ISC",
+  "dependencies": {
+ "bower": "^1.8.0",
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.21",
+    "mongoose": "^4.7.7"
+  },
+  "devDependencies": {
+ "bower": "^1.8.0",
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-uglify": "^2.0.1",
+    "mocha": "^3.2.0",
+    "mongodb": "^2.2.21",
+    "mongoose": "^4.7.7"
   }
 }
