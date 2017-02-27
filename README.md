@@ -1,1 +1,1 @@
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://github.com/AMBarodzich/angular15.git)
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://hub.jazz.net/deploy/index.html?repository=https://github.com/AMBarodzich/angular15.git)
